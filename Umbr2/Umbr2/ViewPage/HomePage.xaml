@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Umbr2.ViewPage.HomePage"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Grid ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Padding="0,-5,0,0">
+                <yummy:PancakeView Grid.Row="0"  CornerRadius="10" BackgroundColor="#2CCFD2" Padding="5">
+                    <Image Source="doctor_umbr" HeightRequest="400" VerticalOptions="StartAndExpand" />
+                </yummy:PancakeView>
+            </StackLayout>
+
+            <Grid Grid.Row="1" ColumnSpacing="18" Padding="18, 30, 18, 18">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <yummy:PancakeView
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="#F8B915"
+                            CornerRadius="50" 
+                            WidthRequest="85"
+                            HeightRequest="85">
+                        <StackLayout>
+                            <ImageButton CornerRadius="50" Source="healthloader" />
+                            <Label
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Health Status"
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <yummy:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer/>
+                        </yummy:PancakeView.GestureRecognizers>
+                    </yummy:PancakeView>
+
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <yummy:PancakeView
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="#A1CFEC"
+                            CornerRadius="15"
+                            WidthRequest="85"
+                            HeightRequest="85">
+                        <StackLayout>
+                            <Image Source="healthcare" />
+                            <Label  LineBreakMode="WordWrap"
+                                    FontAttributes="Bold"
+                                    FontSize="15"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Health Care"
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <yummy:PancakeView
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="#1B83A3"
+                            CornerRadius="15"
+                            WidthRequest="87"
+                            HeightRequest="87">
+                        <StackLayout>
+                            <Image Source="history" />
+                            <Label
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="History"
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                </StackLayout>
+
+            </Grid>
+
+            <Grid Grid.Row="2" ColumnSpacing="10" Padding="10" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <yummy:PancakeView CornerRadius="15" 
+                                Grid.Column="1"
+                                Padding="10"
+                                BackgroundColor="#0D4374">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Image Source="corn"  WidthRequest="80" HeightRequest="70"/>
+                            </StackLayout>
+                            
+                            <Label   FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"
+                                        Text="Food Diet"
+                                        TextColor="White"
+                                        VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <yummy:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="foodDiet"/>
+                        </yummy:PancakeView.GestureRecognizers>
+                    </yummy:PancakeView>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <yummy:PancakeView CornerRadius="50" 
+                                Grid.Column="1"
+                                Padding="10"
+                                BackgroundColor="Red">
+                        <StackLayout>
+                            <ImageButton Source="healthtap.gif" CornerRadius="50"  WidthRequest="80" HeightRequest="80"/>
+                            <!--<Label   FontAttributes="Bold"
+                                        FontSize="20"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"
+                                        Text="Help Center"
+                                        TextColor="White"
+                                        VerticalOptions="CenterAndExpand" />-->
+                        </StackLayout>
+                    </yummy:PancakeView>
+                </StackLayout>
+
+
+            </Grid>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
